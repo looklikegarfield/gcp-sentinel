@@ -24,7 +24,7 @@ variable "shared_vpc_host" {
 variable "subnets" {
   type        = list(map(string))
   description = "The list of subnets being created"
-  default     = "10.0.0.0/24"
+  default     = "subnet-01"
 }
 
 #variable "secondary_ranges" {
