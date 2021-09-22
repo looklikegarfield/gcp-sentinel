@@ -24,7 +24,7 @@ variable "IP_CIDR_Range_subnet_usw2" {
   description = "The network routing mode (default 'GLOBAL')"
 }
 
-variable "access_key" {
+variable "access_token" {
   type        = string
   description = "The network routing mode (default 'GLOBAL')"
 }
