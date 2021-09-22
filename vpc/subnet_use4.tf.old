@@ -1,0 +1,22 @@
+module "subnet_use4" {
+  source            = "git@github.com:looklikegarfield/gcp-sentinel.git//compute_subnetwork"
+  subnet_name       = var.SubnetName_use4
+  network_self_link = module.network.self_link
+  subnet_region     = var.SubnetRegion_use4
+  project_id        = module.project.project_id
+  ip_cidr_range     = var.IP_CIDR_Range_subnet_use4
+}
+
+output "subnet_use4_gateway_address" {
+  value       = module.subnet_use4.gateway_address
+  description = "The IP address of the gateway."
+}
+
+output "subnet_use4_self_link" {
+  value       = module.subnet_use4.self_link
+  description = "The URL of the created resource"
+}
+
+output "subnet_use4_subnet_region" {
+  value = module.subnet_use4.subnet_region
+}
