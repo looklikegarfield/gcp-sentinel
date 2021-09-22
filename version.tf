@@ -12,9 +12,9 @@ terraform {
   }
 }
 
-#provider "google" {
-#  credentials = var.access_token
-#
-#  project = var.project_id
-#  region  = var.SubnetRegion_usw2
-#}
+provider "google" {
+  credentials = var.access_token
+
+  project = var.project_id
+  region  = var.SubnetRegion_usw2
+}
