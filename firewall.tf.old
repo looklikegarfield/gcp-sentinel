@@ -1,5 +1,5 @@
 module "firewall-allow-ssh" {
-  source            = "./GCP_Modules/compute_firewall"
+  source            = "./modules/compute_firewall"
   fw_name           = "fw-allow-ssh-linux"
   network_self_link = "${module.network.self_link}"
   project_id        = "${module.project.project_id}"
@@ -15,7 +15,7 @@ output "fw-allow-ssh_self_link" {
 }
 
 module "firewall-allow-rdp" {
-  source            = "./GCP_Modules/compute_firewall"
+  source            = "./modules/compute_firewall"
   fw_name           = "fw-allow-rdp-windows"
   network_self_link = "${module.network.self_link}"
   project_id        = "${module.project.project_id}"
@@ -31,7 +31,7 @@ output "fw-allow-rdp_self_link" {
 }
 
 module "firewall-allow-icmp" {
-  source            = "./GCP_Modules/compute_firewall"
+  source            = "./modules/compute_firewall"
   fw_name           = "fw-allow-icmp"
   network_self_link = "${module.network.self_link}"
   project_id        = "${module.project.project_id}"
@@ -46,7 +46,7 @@ output "fw-allow-icmp_self_link" {
 
 
 # module "firewall-allow-ad" {
-#   source            = "./GCP_Modules/compute_firewall"
+#   source            = "./modules/compute_firewall"
 #   fw_name           = "fw-allow-ad"
 #   network_self_link = "${module.network.self_link}"
 #   project_id        = "${module.project.project_id}"
