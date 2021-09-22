@@ -20,11 +20,6 @@ variable "SubnetRegion_usw2" {
 #  default     = "10.10.8.0/24"
 #}
 
-variable "access_token" {
-  type        = string
-  sensitive   = true
-}
+variable "access_token" {}
 
-variable "project_id" {
-  type        = string
-}
+variable "project_id" {}
