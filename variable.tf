@@ -37,3 +37,13 @@ variable "project_id" {
   type        = string
 }
 
+
+terraform {
+  required_version = ">= 0.13.0"
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "<4.0,>= 2.12"
+    }
+  }
+}
