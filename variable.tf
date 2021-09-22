@@ -15,10 +15,10 @@ variable "SubnetRegion_usw2" {
   default     = "us-west2"
 }
 
-variable "IP_CIDR_Range_subnet_usw2" {
-  type        = string
-  default     = "10.10.8.0/24"
-}
+#variable "IP_CIDR_Range_subnet_usw2" {
+#  type        = string
+#  default     = "10.10.8.0/24"
+#}
 
 variable "access_token" {
   type        = string
