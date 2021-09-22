@@ -1,9 +1,9 @@
 terraform {
-  required_version = ">= 0.13.0"
-}
+  required_version = ">= 0.13"
+  required_providers {
 
-
-provider "google" {
-  project     = var.project_id
-  region      = "us-west2"
-}
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 3.53"
+    }
+  }
