@@ -24,25 +24,26 @@ variable "shared_vpc_host" {
 variable "subnets" {
   type        = list(map(string))
   description = "The list of subnets being created"
+  default     = "10.0.0.0/24"
 }
 
-variable "secondary_ranges" {
-  type        = map(list(object({ range_name = string, ip_cidr_range = string })))
-  description = "Secondary ranges that will be used in some of the subnets"
-  default     = {}
-}
-
-variable "routes" {
-  type        = list(map(string))
-  description = "List of routes being created in this VPC"
-  default     = []
-}
-
-variable "firewall_rules" {
-  type        = any
-  description = "List of firewall rules"
-  default     = []
-}
+#variable "secondary_ranges" {
+#  type        = map(list(object({ range_name = string, ip_cidr_range = string })))
+#  description = "Secondary ranges that will be used in some of the subnets"
+#  default     = {}
+#}
+#
+#variable "routes" {
+#  type        = list(map(string))
+#  description = "List of routes being created in this VPC"
+#  default     = []
+#}
+#
+#variable "firewall_rules" {
+#  type        = any
+#  description = "List of firewall rules"
+#  default     = []
+#}
 
 variable "delete_default_internet_gateway_routes" {
   type        = bool
