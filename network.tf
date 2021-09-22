@@ -1,5 +1,5 @@
 module "network" {
-  source       = "git@github.com:looklikegarfield/GCP_Modules.git//compute_network"
+  source       = "./GCP_Modules/compute_network"
   network_name = "${var.NetworkName}"
   project_id   = "${module.project.project_id}"
 }
@@ -15,7 +15,7 @@ output "network_self_link" {
 }
 
 module "subnet_usw2" {
-  source            = "git@github.com:looklikegarfield/GCP_Modules.git//compute_subnetwork"
+  source            = "./GCP_Modules/compute_subnetwork"
   subnet_name       = "${var.SubnetName_usw2}"
   network_self_link = "${module.network.self_link}"
   subnet_region     = "${var.SubnetRegion_usw2}"
