@@ -2,9 +2,6 @@
 #
 #VPC Peering name in Cloud Exchange VPC
 #
-VPCPeeringProName = "gisshareddev001"
-#Peering_Shared="shared"
-Peering_CloudExchange="cloudexchange"
 
 
 variable "NetworkName" {
