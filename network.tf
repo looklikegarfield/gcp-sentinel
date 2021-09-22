@@ -1,5 +1,5 @@
 module "network" {
-  source       = "./GCP_Modules/compute_network"
+  source       = "./modules/compute_network"
   network_name = "${var.NetworkName}"
   project_id   = "${module.project.project_id}"
 }
@@ -15,7 +15,7 @@ output "network_self_link" {
 }
 
 module "subnet_usw2" {
-  source            = "./GCP_Modules/compute_subnetwork"
+  source            = "./modules/compute_subnetwork"
   subnet_name       = "${var.SubnetName_usw2}"
   network_self_link = "${module.network.self_link}"
   subnet_region     = "${var.SubnetRegion_usw2}"
