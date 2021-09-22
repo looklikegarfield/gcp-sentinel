@@ -1,10 +1,20 @@
 terraform {
-  required_version = ">= 0.13"
-  required_providers {
+  required_version = ">= 0.13.0"
+}
 
+
+terraform {
+  required_providers {
     google = {
-      source  = "hashicorp/google"
-      version = "~> 3.53"
+      source = "hashicorp/google"
+      version = "3.5.0"
     }
   }
+}
+
+provider "google" {
+  credentials = var.access_token
+
+  project = var.project_id
+  region  = var.SubnetRegion_usw2
 }
