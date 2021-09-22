@@ -1,7 +1,7 @@
 module "network" {
   source       = "./modules/compute_network"
   network_name = "${var.NetworkName}"
-  project_id   = "${module.project.project_id}"
+  project_id   = var.project_id
 }
 
 output "network_name" {
@@ -19,7 +19,7 @@ module "subnet_usw2" {
   subnet_name       = "${var.SubnetName_usw2}"
   network_self_link = "${module.network.self_link}"
   subnet_region     = "${var.SubnetRegion_usw2}"
-  project_id        = "${module.project.project_id}"
+  project_id        = var.project_id
   ip_cidr_range     = "${var.IP_CIDR_Range_subnet_usw2}"
 }
 
