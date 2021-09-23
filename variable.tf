@@ -12,7 +12,8 @@ variable "SubnetName_usw2" {
 
 variable "SubnetRegion_usw2" {
   type    = string
-  default = "us-west2"
+  #default = "us-west2"
+  default = "us-east1"
 }
 
 #variable "IP_CIDR_Range_subnet_usw2" {
